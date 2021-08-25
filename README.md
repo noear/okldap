@@ -3,11 +3,35 @@
 
 ` QQ交流群：22200020 `
 
-
 # okldap
 
+* 如果想在你的业务系统快速使用ldap进行登录？
+* 如果你的内网系统想使用接口快速创建员工的ldap账号？
 
-配置示例：
+你可以试试 okldap。
+
+okldap 是专门为基于ldap账号做内网整合的一套轻量接口。
+
+### 主要功能:
+
+1. 快速的登录接口及示例
+2. 修改密码的接口
+3. 基于员工的管理接口（添人、减人、修改）
+
+
+### 演示：
+
+**引入依赖:**
+
+```xml
+ <dependency>
+    <groupId>org.noear</groupId>
+    <artifactId>okldap</artifactId>
+    <version>1.0</version>
+</dependency>
+```
+
+**配置：**
 
 ```yaml
 #必要选项
@@ -25,7 +49,7 @@ demo:
     groupCn: "manager"
 ```
 
-代码示例：（更多示例，可参考源码里的单元测试）
+**代码：（更多应用代码，可参考源码里的单元测试）**
 
 ```java
 
