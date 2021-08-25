@@ -10,7 +10,7 @@ import java.io.Closeable;
 import java.util.List;
 
 /**
- * Ldap 客户端
+ * Ldap 会话
  *
  * @author noear
  * @since 1.0

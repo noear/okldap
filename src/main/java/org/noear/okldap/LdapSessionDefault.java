@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * Ldap 客户端默认实现
+ * Ldap 会话默认实现
  *
  * @author noear
  * @since 1.0

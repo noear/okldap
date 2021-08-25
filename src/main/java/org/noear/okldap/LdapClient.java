@@ -11,6 +11,8 @@ import java.util.Hashtable;
 import java.util.Properties;
 
 /**
+ * Ldap 客户端
+ *
  * @author noear
  * @since 1.0
  */
