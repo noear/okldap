@@ -2,16 +2,13 @@ package features;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.noear.helloldap.LdapClient;
-import org.noear.helloldap.LdapSession;
-import org.noear.helloldap.entity.LdapGroup;
-import org.noear.helloldap.entity.LdapPerson;
-import org.noear.helloldap.exception.IllegalPaaswordException;
-import org.noear.helloldap.exception.IllegalPersonException;
+import org.noear.okldap.LdapClient;
+import org.noear.okldap.LdapSession;
+import org.noear.okldap.entity.LdapPerson;
+import org.noear.okldap.exception.IllegalPaaswordException;
+import org.noear.okldap.exception.IllegalPersonException;
 import org.noear.solon.annotation.Inject;
 import org.noear.solon.test.SolonJUnit4ClassRunner;
-
-import java.util.List;
 
 
 /**

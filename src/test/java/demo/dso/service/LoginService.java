@@ -1,9 +1,9 @@
 package demo.dso.service;
 
 import demo.model.User;
-import org.noear.helloldap.LdapSession;
-import org.noear.helloldap.LdapClient;
-import org.noear.helloldap.entity.LdapPerson;
+import org.noear.okldap.LdapSession;
+import org.noear.okldap.LdapClient;
+import org.noear.okldap.entity.LdapPerson;
 import org.noear.solon.annotation.Component;
 import org.noear.solon.annotation.Inject;
 

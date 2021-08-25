@@ -1,6 +1,6 @@
 package demo;
 
-import org.noear.helloldap.LdapClient;
+import org.noear.okldap.LdapClient;
 import org.noear.solon.annotation.Bean;
 import org.noear.solon.annotation.Configuration;
 import org.noear.solon.annotation.Inject;

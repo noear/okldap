@@ -1,8 +1,8 @@
-package org.noear.helloldap;
+package org.noear.okldap;
 
-import org.noear.helloldap.entity.LdapGroup;
-import org.noear.helloldap.entity.LdapNode;
-import org.noear.helloldap.entity.LdapPerson;
+import org.noear.okldap.entity.LdapGroup;
+import org.noear.okldap.entity.LdapNode;
+import org.noear.okldap.entity.LdapPerson;
 
 import javax.naming.NamingException;
 import javax.naming.directory.Attributes;

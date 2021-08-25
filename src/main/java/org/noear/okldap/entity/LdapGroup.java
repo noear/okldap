@@ -1,4 +1,4 @@
-package org.noear.helloldap.entity;
+package org.noear.okldap.entity;
 
 import lombok.Getter;
 import lombok.ToString;

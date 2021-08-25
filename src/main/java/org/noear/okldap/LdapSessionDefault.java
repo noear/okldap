@@ -1,13 +1,13 @@
-package org.noear.helloldap;
+package org.noear.okldap;
 
-import org.noear.helloldap.entity.LdapGroup;
-import org.noear.helloldap.entity.LdapNode;
-import org.noear.helloldap.entity.LdapPerson;
-import org.noear.helloldap.exception.IllegalConfigException;
-import org.noear.helloldap.exception.IllegalGroupException;
-import org.noear.helloldap.exception.IllegalPaaswordException;
-import org.noear.helloldap.exception.IllegalPersonException;
-import org.noear.helloldap.utils.TextUtils;
+import org.noear.okldap.entity.LdapGroup;
+import org.noear.okldap.entity.LdapNode;
+import org.noear.okldap.entity.LdapPerson;
+import org.noear.okldap.exception.IllegalConfigException;
+import org.noear.okldap.exception.IllegalGroupException;
+import org.noear.okldap.exception.IllegalPaaswordException;
+import org.noear.okldap.exception.IllegalPersonException;
+import org.noear.okldap.utils.TextUtils;
 
 import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;

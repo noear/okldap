@@ -1,4 +1,4 @@
-package org.noear.helloldap.exception;
+package org.noear.okldap.exception;
 
 /**
  * 无效的分组

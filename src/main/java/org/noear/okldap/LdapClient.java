@@ -1,7 +1,7 @@
-package org.noear.helloldap;
+package org.noear.okldap;
 
-import org.noear.helloldap.exception.IllegalConfigException;
-import org.noear.helloldap.utils.TextUtils;
+import org.noear.okldap.exception.IllegalConfigException;
+import org.noear.okldap.utils.TextUtils;
 
 import javax.naming.Context;
 import javax.naming.NamingException;

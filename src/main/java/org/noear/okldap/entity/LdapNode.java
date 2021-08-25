@@ -1,4 +1,4 @@
-package org.noear.helloldap.entity;
+package org.noear.okldap.entity;
 
 import javax.naming.NamingException;
 import javax.naming.directory.Attributes;

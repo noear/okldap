@@ -1,9 +1,9 @@
-package org.noear.helloldap.entity;
+package org.noear.okldap.entity;
 
 import lombok.Getter;
 import lombok.ToString;
-import org.noear.helloldap.utils.PasswordUtils;
-import org.noear.helloldap.utils.TextUtils;
+import org.noear.okldap.utils.PasswordUtils;
+import org.noear.okldap.utils.TextUtils;
 
 import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;

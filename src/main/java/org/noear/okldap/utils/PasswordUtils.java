@@ -1,4 +1,4 @@
-package org.noear.helloldap.utils;
+package org.noear.okldap.utils;
 
 import java.security.MessageDigest;
 
