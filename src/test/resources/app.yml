@@ -9,7 +9,7 @@
 
 
 solon.ldap:
-  url: "ldap://localhost2:389"
+  url: "ldap://localhost2"
   baseDn: "DC=company,DC=com"
   bindDn: "cn=admin,dc=company,dc=com"
   paasword: "sKSaupjEChi72YGb"
