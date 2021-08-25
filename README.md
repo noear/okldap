@@ -14,8 +14,9 @@ ldap:
   groupFilter: "cn=%s"
 
 #Demo选项
-demo.limit:
-  groupCn: "manager"
+demo:
+  limit:
+    groupCn: "manager"
 ```
 
 代码示例：（更多示例，可参考源码里的单元测试）
