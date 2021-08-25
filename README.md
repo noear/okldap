@@ -1,3 +1,9 @@
+
+[![Maven Central](https://img.shields.io/maven-central/v/org.noear/okldap.svg)](https://mvnrepository.com/search?q=g:org.noear%20AND%20okldap)
+
+` QQ交流群：22200020 `
+
+
 # okldap
 
 
