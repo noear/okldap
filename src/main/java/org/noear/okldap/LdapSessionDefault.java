@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * Ldap 客户端
+ * Ldap 客户端默认实现
  *
  * @author noear
  * @since 1.0
@@ -375,7 +375,6 @@ public class LdapSessionDefault implements LdapSession {
     }
 
     private NamingEnumeration<SearchResult> searchDo(String filter) throws NamingException {
-        //搜索控件
         SearchControls searchControls = new SearchControls();
 
         //搜索范围:: 0 表示收索命名对象; 1 表示搜索一级命名对象; 2 表示搜索以命名对象为根的整棵子树
