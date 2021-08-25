@@ -1,0 +1,24 @@
+
+#solon.ldap:
+#  url: "ldap://localhost:389"
+#  baseDn: "DC=company,DC=com"
+#  bindDn: "cn=admin,dc=company,dc=com"
+#  paasword: "123456"
+#  userFilter: "cn=%s"
+#  groupFilter: "cn=%s"
+
+
+solon.ldap:
+  url: "ldap://localhost2:389"
+  baseDn: "DC=company,DC=com"
+  bindDn: "cn=admin,dc=company,dc=com"
+  paasword: "sKSaupjEChi72YGb"
+  userFilter: "cn=%s"
+  groupFilter: "cn=%s"
+
+solon.ldap.test:
+  userName: "xidong"
+  userPassword: "xd123456."
+  groupOk1: "vpnuser"
+  groupOk2: "manager"
+  groupNo: "ui"
