@@ -19,8 +19,8 @@ import java.util.Properties;
 public class LdapClient {
     private final Hashtable config;
     private String baseDn;
-    private String userFilter = "%s";
-    private String groupFilter = "%s";
+    private String userFilter;
+    private String groupFilter;
 
     public void setBaseDn(String baseDn) {
         if (TextUtils.isNotEmpty(baseDn)) {
