@@ -25,13 +25,35 @@ public class LdapPerson implements LdapNode {
     protected String uid;
     protected String uidNumber;
 
+    /**
+     * 姓
+     * */
     protected String sn;
-    protected String userPassword;
-    protected String displayName;
+    /**
+     * 名字
+     * */
     protected String givenName;
-    protected String physicalDeliveryOfficeName;
-    protected String mail;
+    /**
+     * 密码
+     * */
+    protected String userPassword;
+    /**
+     * 显示名
+     * */
+    protected String displayName;
+    /**
+     * 描述
+     * */
     protected String description;
+    /**
+     * 电子邮件
+     * */
+    protected String mail;
+
+    /**
+     * 办公室
+     * */
+    protected String physicalDeliveryOfficeName;
 
     protected String gidNumber;
 
