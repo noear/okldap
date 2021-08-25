@@ -113,12 +113,13 @@ public class DemoController {
      * */
     @Post
     @Mapping("create")
-    public Result create(String userName, String userPassword, String displayName) {
+    public Result create(String userName, String userPassword, String stageName, String realName) {
         try (LdapSession session = ldapClient.open()) {
             LdapPerson person = new LdapPerson();
             person.setCn(userName);
             person.setUserPassword(userPassword);
-            person.setDisplayName(displayName);
+            person.setDisplayName(stageName);
+            person.setPhysicalDeliveryOfficeName(realName);
 
             session.createPerson("employee", person);
         }
