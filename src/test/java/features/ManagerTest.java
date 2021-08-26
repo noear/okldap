@@ -59,6 +59,7 @@ public class ManagerTest {
 
             //可选
             person.setDisplayName(userName);
+            person.setGivenName("noear-test");
             person.setMail(userName + "@xxx.com");
 
             session.createPerson("test", person);
