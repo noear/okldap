@@ -119,9 +119,26 @@ public class DemoController {
             person.setCn(userName);
             person.setUserPassword(userPassword);
             person.setDisplayName(stageName);
-            person.setPhysicalDeliveryOfficeName(realName);
+            person.setGivenName(realName);
 
             session.createPerson("employee", person);
+        }
+
+        return Result.succeed();
+    }
+
+    /**
+     *  修改用户::
+     * */
+    @Post
+    @Mapping("update")
+    public Result update(String userName, String stageName, String realName) {
+        try (LdapSession session = ldapClient.open()) {
+            LdapPerson person = session.findPersonOne(userName);
+            person.setDisplayName(stageName);
+            person.setGivenName(realName);
+
+            session.updatePerson(person);
         }
 
         return Result.succeed();

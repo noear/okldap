@@ -19,7 +19,7 @@ import java.util.List;
  * */
 @Getter
 @ToString
-public class LdapGroup implements LdapNode {
+public class LdapGroup implements LdapEntry {
     private String dn;
     private String cn;
 

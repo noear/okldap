@@ -1,7 +1,7 @@
 package org.noear.okldap;
 
 import org.noear.okldap.entity.LdapGroup;
-import org.noear.okldap.entity.LdapNode;
+import org.noear.okldap.entity.LdapEntry;
 import org.noear.okldap.entity.LdapPerson;
 import org.noear.okldap.exception.IllegalConfigException;
 import org.noear.okldap.exception.IllegalGroupException;
@@ -218,7 +218,7 @@ public class LdapSessionDefault implements LdapSession {
      * @param condition   条件
      * @param tClass      对象实体类
      */
-    public <T extends LdapNode> T findOneBy(String objectClass, String condition, Class<T> tClass) throws NamingException {
+    public <T extends LdapEntry> T findOneBy(String objectClass, String condition, Class<T> tClass) throws NamingException {
         if(TextUtils.isEmpty(objectClass)){
             throw new IllegalArgumentException("objectClass");
         }
@@ -245,7 +245,7 @@ public class LdapSessionDefault implements LdapSession {
      * @param filter 过滤条件
      * @param tClass 对象实体类型
      */
-    public <T extends LdapNode> T findOne(String filter, Class<T> tClass) throws NamingException {
+    public <T extends LdapEntry> T findOne(String filter, Class<T> tClass) throws NamingException {
         if(TextUtils.isEmpty(filter)){
             throw new IllegalArgumentException("filter");
         }
@@ -275,7 +275,7 @@ public class LdapSessionDefault implements LdapSession {
      * @param condition   条件
      * @param tClass      对象实体类
      */
-    public <T extends LdapNode> List<T> findListBy(String objectClass, String condition, Class<T> tClass) throws NamingException {
+    public <T extends LdapEntry> List<T> findListBy(String objectClass, String condition, Class<T> tClass) throws NamingException {
         if(TextUtils.isEmpty(objectClass)){
             throw new IllegalArgumentException("objectClass");
         }
@@ -307,7 +307,7 @@ public class LdapSessionDefault implements LdapSession {
      * @param filter 过滤条件
      * @param tClass 对象实体类型
      */
-    public <T extends LdapNode> List<T> findList(String filter, Class<T> tClass) throws NamingException {
+    public <T extends LdapEntry> List<T> findList(String filter, Class<T> tClass) throws NamingException {
         if(TextUtils.isEmpty(filter)){
             throw new IllegalArgumentException("filter");
         }

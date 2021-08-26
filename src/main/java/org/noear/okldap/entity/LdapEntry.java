@@ -11,15 +11,16 @@ import java.io.Serializable;
  * @author noear
  * @since 1.0
  */
-public interface LdapNode extends Serializable {
+public interface LdapEntry extends Serializable {
+    /**
+     * 获取DN（唯一标识）
+     * */
+    String getDn();
+
     /**
      * 获取CN
      * */
     String getCn();
-    /**
-     * 获取DN
-     * */
-    String getDn();
 
     /**
      * 获取属性

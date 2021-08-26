@@ -1,7 +1,7 @@
 package org.noear.okldap;
 
 import org.noear.okldap.entity.LdapGroup;
-import org.noear.okldap.entity.LdapNode;
+import org.noear.okldap.entity.LdapEntry;
 import org.noear.okldap.entity.LdapPerson;
 
 import javax.naming.NamingException;
@@ -91,7 +91,7 @@ public interface LdapSession extends Closeable {
      * @param condition   条件
      * @param tClass      对象实体类
      */
-    <T extends LdapNode> T findOneBy(String objectClass, String condition, Class<T> tClass) throws NamingException;
+    <T extends LdapEntry> T findOneBy(String objectClass, String condition, Class<T> tClass) throws NamingException;
 
     /**
      * 查找单节点
@@ -99,7 +99,7 @@ public interface LdapSession extends Closeable {
      * @param filter 过滤条件
      * @param tClass 对象实体类型
      */
-    <T extends LdapNode> T findOne(String filter, Class<T> tClass) throws NamingException;
+    <T extends LdapEntry> T findOne(String filter, Class<T> tClass) throws NamingException;
 
     /**
      * 查询节点列表
@@ -108,7 +108,7 @@ public interface LdapSession extends Closeable {
      * @param condition   条件
      * @param tClass      对象实体类
      */
-    <T extends LdapNode> List<T> findListBy(String objectClass, String condition, Class<T> tClass) throws NamingException;
+    <T extends LdapEntry> List<T> findListBy(String objectClass, String condition, Class<T> tClass) throws NamingException;
 
     /**
      * 查询节点列表
@@ -116,7 +116,7 @@ public interface LdapSession extends Closeable {
      * @param filter 过滤条件
      * @param tClass 对象实体类型
      */
-    <T extends LdapNode> List<T> findList(String filter, Class<T> tClass) throws NamingException;
+    <T extends LdapEntry> List<T> findList(String filter, Class<T> tClass) throws NamingException;
 
     /**
      * 创建一个节点

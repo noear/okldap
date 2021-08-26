@@ -18,44 +18,70 @@ import java.nio.charset.StandardCharsets;
  * */
 @Getter
 @ToString
-public class LdapPerson implements LdapNode {
+public class LdapPerson implements LdapEntry {
+    /**
+     * distinguished Name
+     * */
     protected String dn;
-    protected String cn;
 
+    /**
+     * user id
+     * */
     protected String uid;
+    /**
+     * user id number
+     * */
     protected String uidNumber;
 
     /**
-     * 姓
+     * 分组ID数字号码
+     * */
+    protected String gidNumber;
+
+    /**
+     * common name
+     * */
+    protected String cn;
+    /**
+     * user password，用户密码
+     * */
+    protected String userPassword;
+
+    /**
+     * surname，姓
      * */
     protected String sn;
     /**
-     * 名字
+     * givenName，名字
      * */
     protected String givenName;
     /**
-     * 密码
-     * */
-    protected String userPassword;
-    /**
-     * 显示名
+     * display name，显示名
      * */
     protected String displayName;
     /**
-     * 描述
+     * title
+     * */
+    protected String title;
+    /**
+     * description
      * */
     protected String description;
     /**
-     * 电子邮件
+     * mail
      * */
     protected String mail;
 
     /**
-     * 办公室
+     * telephone number
      * */
-    protected String physicalDeliveryOfficeName;
+    protected String mobile;
 
-    protected String gidNumber;
+    /**
+     * telephone number
+     * */
+    protected String telephoneNumber;
+
 
     private Attributes attributes;
 
@@ -88,6 +114,22 @@ public class LdapPerson implements LdapNode {
     }
 
 
+    public void setUid(String val) {
+        this.uid = val;
+        getAttributes().put("uid", val);
+    }
+
+    public void setUidNumber(String val) {
+        this.uidNumber = val;
+        getAttributes().put("uidNumber", val);
+    }
+
+
+    public void setGidNumber(String val) {
+        this.gidNumber = val;
+        getAttributes().put("gidNumber", val);
+    }
+
     public void setCn(String val) {
         this.cn = val;
         getAttributes().put("cn", val);
@@ -106,25 +148,9 @@ public class LdapPerson implements LdapNode {
         }
     }
 
-    public void setUid(String val) {
-        this.uid = val;
-        getAttributes().put("uid", val);
-    }
-
-    public void setUidNumber(String val) {
-        this.uidNumber = val;
-        getAttributes().put("uidNumber", val);
-    }
-
     public void setSn(String val) {
         this.sn = val;
         getAttributes().put("sn", val);
-    }
-
-
-    public void setDisplayName(String val) {
-        this.displayName = val;
-        getAttributes().put("displayName", val);
     }
 
     public void setGivenName(String val) {
@@ -132,14 +158,14 @@ public class LdapPerson implements LdapNode {
         getAttributes().put("givenName", val);
     }
 
-    public void setPhysicalDeliveryOfficeName(String val) {
-        this.physicalDeliveryOfficeName = val;
-        getAttributes().put("physicalDeliveryOfficeName", val);
+    public void setDisplayName(String val) {
+        this.displayName = val;
+        getAttributes().put("displayName", val);
     }
 
-    public void setMail(String val) {
-        this.mail = val;
-        getAttributes().put("mail", val);
+    public void setTitle(String val) {
+        this.title = val;
+        getAttributes().put("title", val);
     }
 
     public void setDescription(String val) {
@@ -147,9 +173,19 @@ public class LdapPerson implements LdapNode {
         getAttributes().put("description", val);
     }
 
-    public void setGidNumber(String val) {
-        this.gidNumber = val;
-        getAttributes().put("gidNumber", val);
+    public void setMail(String val) {
+        this.mail = val;
+        getAttributes().put("mail", val);
+    }
+
+    public void setTelephoneNumber(String val) {
+        this.telephoneNumber = telephoneNumber;
+        getAttributes().put("telephoneNumber", val);
+    }
+
+    public void setMobile(String val) {
+        this.mobile = val;
+        getAttributes().put("mobile", val);
     }
 
     @Override
@@ -169,26 +205,30 @@ public class LdapPerson implements LdapNode {
 
             if ("uid".equals(key)) {
                 this.uid = (val.get().toString());
-            } else if ("cn".equals(key)) {
-                this.cn = (val.get().toString());
-            } else if ("sn".equals(key)) {
-                this.sn = (val.get().toString());
-            } else if ("userPassword".equals(key)) {
-                this.userPassword = (new String((byte[]) val.get()));
-            } else if ("displayName".equals(key)) {
-                this.displayName = (val.get().toString());
-            } else if ("givenName".equals(key)) {
-                this.givenName = (val.get().toString());
-            } else if ("physicalDeliveryOfficeName".equals(key)) {
-                this.physicalDeliveryOfficeName = (val.get().toString());
-            } else if ("mail".equals(key)) {
-                this.mail = (val.get().toString());
-            } else if ("description".equals(key)) {
-                this.description = (val.get().toString());
             } else if ("uidNumber".equals(key)) {
                 this.uidNumber = (val.get().toString());
             } else if ("gidNumber".equals(key)) {
                 this.gidNumber = (val.get().toString());
+            } else if ("cn".equals(key)) {
+                this.cn = (val.get().toString());
+            } else if ("userPassword".equals(key)) {
+                this.userPassword = (new String((byte[]) val.get()));
+            } else if ("sn".equals(key)) {
+                this.sn = (val.get().toString());
+            } else if ("givenName".equals(key)) {
+                this.givenName = (val.get().toString());
+            } else if ("displayName".equals(key)) {
+                this.displayName = (val.get().toString());
+            } else if ("title".equals(key)) {
+                this.title = (val.get().toString());
+            } else if ("description".equals(key)) {
+                this.description = (val.get().toString());
+            } else if ("mail".equals(key)) {
+                this.mail = (val.get().toString());
+            } else if ("telephoneNumber".equals(key)) {
+                this.telephoneNumber = (val.get().toString());
+            } else if ("mobile".equals(key)) {
+                this.mobile = (val.get().toString());
             }
         }
     }
