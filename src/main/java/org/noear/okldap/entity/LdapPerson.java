@@ -22,65 +22,70 @@ public class LdapPerson implements LdapEntry {
     /**
      * distinguished Name
      * */
-    protected String dn;
+    private String dn;
 
     /**
      * user id
      * */
-    protected String uid;
+    private String uid;
     /**
      * user id number
      * */
-    protected String uidNumber;
+    private String uidNumber;
 
     /**
      * 分组ID数字号码
      * */
-    protected String gidNumber;
+    private String gidNumber;
 
     /**
      * common name
      * */
-    protected String cn;
+    private String cn;
     /**
      * user password，用户密码
      * */
-    protected String userPassword;
+    private String userPassword;
 
     /**
      * surname，姓
      * */
-    protected String sn;
+    private String sn;
     /**
      * givenName，名字
      * */
-    protected String givenName;
+    private String givenName;
     /**
      * display name，显示名
      * */
-    protected String displayName;
+    private String displayName;
     /**
      * title
      * */
-    protected String title;
+    private String title;
     /**
      * description
      * */
-    protected String description;
+    private String description;
     /**
      * mail
      * */
-    protected String mail;
+    private String mail;
 
     /**
      * telephone number
      * */
-    protected String mobile;
+    private String mobile;
 
     /**
      * telephone number
      * */
-    protected String telephoneNumber;
+    private String telephoneNumber;
+
+    /**
+     * ou
+     * */
+    private String ou;
 
 
     private Attributes attributes;
@@ -188,6 +193,11 @@ public class LdapPerson implements LdapEntry {
         getAttributes().put("mobile", val);
     }
 
+    public void setOu(String ou) {
+        this.ou = ou;
+        getAttributes().put("ou", ou);
+    }
+
     @Override
     public void bind(SearchResult result) throws NamingException {
         try {
@@ -229,6 +239,8 @@ public class LdapPerson implements LdapEntry {
                 this.telephoneNumber = (val.get().toString());
             } else if ("mobile".equals(key)) {
                 this.mobile = (val.get().toString());
+            } else if ("ou".equals(key)) {
+                this.ou = (val.get().toString());
             }
         }
     }

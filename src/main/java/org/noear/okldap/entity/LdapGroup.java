@@ -22,6 +22,7 @@ import java.util.List;
 public class LdapGroup implements LdapEntry {
     private String dn;
     private String cn;
+    private String ou;
 
     private String gidNumber;
     private List<String> memberUid;
@@ -46,6 +47,8 @@ public class LdapGroup implements LdapEntry {
 
             if ("cn".equals(key)) {
                 this.cn = (val.get().toString());
+            } else if ("ou".equals(key)) {
+                this.ou = (val.get().toString());
             } else if ("memberUid".equals(key)) {
                 NamingEnumeration<String> vals = (NamingEnumeration<String>) val.getAll();
 
