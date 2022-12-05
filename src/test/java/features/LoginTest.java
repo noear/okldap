@@ -44,6 +44,9 @@ public class LoginTest {
         System.out.println(user);
 
         assert user != null;
+
+        assert user.getCn() != null;
+        assert user.getAttr("cn") != null;
     }
 
     /**

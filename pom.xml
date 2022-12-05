@@ -6,7 +6,7 @@
 
     <groupId>org.noear</groupId>
     <artifactId>okldap</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
@@ -45,21 +45,21 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
+            <version>1.18.24</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
             <artifactId>solon-api</artifactId>
-            <version>1.10.9</version>
+            <version>1.11.3</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
             <artifactId>solon-test</artifactId>
-            <version>1.10.9</version>
+            <version>1.11.3</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

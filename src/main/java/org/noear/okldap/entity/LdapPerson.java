@@ -98,6 +98,19 @@ public class LdapPerson implements LdapEntry {
         return attributes;
     }
 
+    public String getAttr(String name) throws NamingException {
+        if (getAttributes() == null) {
+            return null;
+        }
+
+        Attribute attr = getAttributes().get(name);
+        if (attr == null) {
+            return null;
+        }
+
+        return attr.get().toString();
+    }
+
     /**
      * 准备
      * */
