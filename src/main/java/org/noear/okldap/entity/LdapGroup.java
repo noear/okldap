@@ -29,18 +29,6 @@ public class LdapGroup implements LdapEntry {
 
     private Attributes attributes;
 
-    public String getAttr(String name) throws NamingException {
-        if (getAttributes() == null) {
-            return null;
-        }
-
-        Attribute attr = getAttributes().get(name);
-        if (attr == null) {
-            return null;
-        }
-
-        return attr.get().toString();
-    }
 
     @Override
     public void bind(SearchResult result) throws NamingException {

@@ -30,7 +30,7 @@ OkLdap 是专门为基于 LDAP 账号做内网整合的简便客户端。
  <dependency>
     <groupId>org.noear</groupId>
     <artifactId>okldap</artifactId>
-    <version>1.1.2</version>
+    <version>1.1.3</version>
 </dependency>
 ```
 
