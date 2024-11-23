@@ -1,20 +1,19 @@
 package features;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.noear.okldap.LdapClient;
 import org.noear.okldap.LdapSession;
 import org.noear.okldap.entity.LdapPerson;
 import org.noear.okldap.exception.IllegalPaaswordException;
 import org.noear.okldap.exception.IllegalPersonException;
 import org.noear.solon.annotation.Inject;
-import org.noear.solon.test.SolonJUnit4ClassRunner;
+import org.noear.solon.test.SolonTest;
 
 
 /**
  * @author noear
  */
-@RunWith(SolonJUnit4ClassRunner.class)
+@SolonTest
 public class LoginTest {
     @Inject("${solon.ldap}")
     private LdapClient client;

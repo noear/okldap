@@ -1,17 +1,16 @@
 package features;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.noear.okldap.LdapClient;
 import org.noear.okldap.LdapSession;
 import org.noear.okldap.entity.LdapPerson;
 import org.noear.solon.annotation.Inject;
-import org.noear.solon.test.SolonJUnit4ClassRunner;
+import org.noear.solon.test.SolonTest;
 
 /**
  * @author noear 2021/8/25 created
  */
-@RunWith(SolonJUnit4ClassRunner.class)
+@SolonTest
 public class UpdatePasswordTest {
     @Inject("${solon.ldap}")
     private LdapClient client;

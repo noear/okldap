@@ -1,13 +1,12 @@
 package features;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.noear.okldap.LdapClient;
 import org.noear.okldap.LdapSession;
 import org.noear.okldap.entity.LdapGroup;
 import org.noear.okldap.entity.LdapPerson;
 import org.noear.solon.annotation.Inject;
-import org.noear.solon.test.SolonJUnit4ClassRunner;
+import org.noear.solon.test.SolonTest;
 
 import java.util.List;
 
@@ -15,7 +14,7 @@ import java.util.List;
 /**
  * @author noear
  */
-@RunWith(SolonJUnit4ClassRunner.class)
+@SolonTest
 public class ManagerTest {
     @Inject("${solon.ldap}")
     private LdapClient client;
